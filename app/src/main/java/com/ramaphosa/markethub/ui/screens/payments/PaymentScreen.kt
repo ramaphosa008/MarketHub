@@ -5,9 +5,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun PaymentScreen(){
+fun PaymentScreen(navController: NavController){
 
     Column(
         modifier = Modifier.fillMaxSize()
@@ -21,6 +23,6 @@ fun PaymentScreen(){
 @Composable
 fun PaymentScreenPreview() {
 
-    PaymentScreen()
+    PaymentScreen(rememberNavController())
 
 }

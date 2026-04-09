@@ -36,11 +36,13 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.ramaphosa.markethub.R
 import com.ramaphosa.markethub.ui.theme.green8
 
 @Composable
-fun LoginScreen(){
+fun LoginScreen(navController: NavController){
 
     Column(
         modifier = Modifier
@@ -139,6 +141,6 @@ fun LoginScreen(){
 @Composable
 fun LoginScreenPreview() {
 
-    LoginScreen()
+    LoginScreen(rememberNavController())
 
 }
