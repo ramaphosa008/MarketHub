@@ -39,6 +39,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.ramaphosa.markethub.R
+import com.ramaphosa.markethub.ui.screens.navigation.ROUT_HOME
 import com.ramaphosa.markethub.ui.theme.green8
 
 @Composable
@@ -128,11 +129,22 @@ fun LoginScreen(navController: NavController){
 
         Spacer(modifier = Modifier.width(20.dp))
 
+        Button(
+            onClick = {navController.navigate(ROUT_HOME)},
+            colors = ButtonDefaults.buttonColors(green8),
+            shape = RoundedCornerShape(20.dp),
+            modifier = Modifier.width(350.dp)
+        ) {
+            Text(text = "Go to Home")
+        }
+
 
         TextButton( onClick = {}) {
 
             Text( text = "Don't have an account? Register")
         }
+
+
     }
 
 }

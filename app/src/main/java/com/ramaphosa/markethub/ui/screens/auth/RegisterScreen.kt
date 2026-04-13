@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.ramaphosa.markethub.R
+import com.ramaphosa.markethub.ui.screens.navigation.ROUT_LOGIN
 import com.ramaphosa.markethub.ui.theme.green8
 
 @Composable
@@ -178,10 +179,8 @@ fun RegisterScreen(navController: NavController){
 
 
 
-        TextButton( onClick = {}) {
-
-            Text( text = "Already have an account? Login")
-        }
+        TextButton(onClick = {navController.navigate(ROUT_LOGIN)}){
+            Text(text = "Already have an account? Login")}
 
     }
 
