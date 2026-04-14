@@ -13,14 +13,16 @@ import com.ramaphosa.markethub.ui.screens.home.HomeScreen
 import com.ramaphosa.markethub.ui.screens.intent.IntentScreen
 import com.ramaphosa.markethub.ui.screens.onboarding.OnboardingScreen
 import com.ramaphosa.markethub.ui.screens.payments.PaymentScreen
+import com.ramaphosa.markethub.ui.screens.scaffold.ScaffoldScreen
 import com.ramaphosa.markethub.ui.screens.service.ServiceScreen
+import com.ramaphosa.markethub.ui.screens.splash.SplashScreen
 
 
 @Composable
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_ONBOARDING
+    startDestination: String = ROUT_SPLASH
 ) {
 
     NavHost(
@@ -59,6 +61,15 @@ fun AppNavHost(
         composable(ROUT_INTENT) {
             IntentScreen(navController)
         }
+
+        composable(ROUT_SPLASH) {
+            SplashScreen(navController)
+        }
+
+        composable(ROUT_SCAFFOLD) {
+            ScaffoldScreen(navController)
+        }
+
 
 
     }

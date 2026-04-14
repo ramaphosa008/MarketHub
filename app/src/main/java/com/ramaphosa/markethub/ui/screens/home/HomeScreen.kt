@@ -50,6 +50,7 @@ import androidx.navigation.compose.rememberNavController
 import com.ramaphosa.markethub.R
 import com.ramaphosa.markethub.ui.screens.navigation.ROUT_INTENT
 import com.ramaphosa.markethub.ui.screens.navigation.ROUT_REGISTER
+import com.ramaphosa.markethub.ui.screens.navigation.ROUT_SCAFFOLD
 import com.ramaphosa.markethub.ui.theme.green8
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -191,6 +192,15 @@ fun HomeScreen(navController: NavController){
             modifier = Modifier.width(350.dp)
         ) {
             Text(text = "Register Now")
+        }
+
+        Button(
+            onClick = { navController.navigate(ROUT_SCAFFOLD) },
+            colors = ButtonDefaults.buttonColors(green8),
+            shape = RoundedCornerShape(10.dp),
+            modifier = Modifier.width(350.dp)
+        ) {
+            Text(text = "Scaffold")
         }
 
 

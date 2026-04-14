@@ -11,3 +11,5 @@ const val ROUT_PAYMENT = "payment"
 const val ROUT_SERVICE = "service"
 
 const val ROUT_INTENT = "intent"
+const val ROUT_SPLASH = "splash"
+const val ROUT_SCAFFOLD = "scaffold"
