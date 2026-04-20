@@ -36,6 +36,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.ramaphosa.markethub.ui.screens.navigation.ROUT_HOME
 import com.ramaphosa.markethub.ui.screens.navigation.ROUT_ONBOARDING
 import com.ramaphosa.markethub.ui.theme.green8
 import kotlinx.coroutines.delay
@@ -53,7 +54,7 @@ fun ScaffoldScreen(navController: NavController){
         //TopBar
         topBar = {
             TopAppBar(
-                title = { Text("Contact Screen") },
+                title = { Text("Scaffold Screen") },
                 navigationIcon = {
                     IconButton(onClick = { /* Handle back/nav */ }) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "Back")
@@ -73,11 +74,11 @@ fun ScaffoldScreen(navController: NavController){
                 containerColor = green8
             ){
                 NavigationBarItem(
-                    icon = { Icon(Icons.Default.Home, contentDescription = "Home") },
-                    label = { Text("Home") },
+                    icon = { Icon(Icons.Default.Home, contentDescription = "Home", tint = Color.Black) },
+                    label = { Text("Home", color = Color.Black) },
                     selected = selectedIndex == 0,
                     onClick = { selectedIndex = 0
-                        //navController.navigate(ROUT_HOME)
+                        navController.navigate(ROUT_HOME)
                     }
                 )
                 NavigationBarItem(
@@ -97,14 +98,7 @@ fun ScaffoldScreen(navController: NavController){
                     }
                 )
 
-                NavigationBarItem(
-                    icon = { Icon(Icons.Default.Person, contentDescription = "Profile") },
-                    label = { Text("Profile") },
-                    selected = selectedIndex == 2,
-                    onClick = { selectedIndex = 2
-                        //  navController.navigate(ROUT_HOME)
-                    }
-                )
+
 
             }
         },
@@ -118,6 +112,9 @@ fun ScaffoldScreen(navController: NavController){
                 Icon(Icons.Default.Add, contentDescription = "Add")
             }
         },
+        floatingActionButtonPosition = androidx.compose.material3.FabPosition.End,
+
+
         content = { paddingValues ->
             Column(
                 modifier = Modifier
@@ -127,9 +124,7 @@ fun ScaffoldScreen(navController: NavController){
 
 
                 //Main Contents of the page
-                Text(text = "Welcome to Homescreen Screen", fontSize = 20.sp)
-                Spacer(modifier = Modifier.height(8.dp))
-                Text("This is where the main content goes.")
+             
 
 
 
