@@ -29,6 +29,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -39,6 +40,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.ramaphosa.markethub.R
+import com.ramaphosa.markethub.data.AuthViewModel
 import com.ramaphosa.markethub.ui.screens.navigation.ROUT_HOME
 import com.ramaphosa.markethub.ui.theme.green8
 
@@ -118,14 +120,28 @@ fun LoginScreen(navController: NavController){
 
         Spacer(modifier = Modifier.width(20.dp))
 
+
+        // Login Button
+        val context = LocalContext.current
+        val authViewModel = AuthViewModel(navController, context)
         Button(
-            onClick = {},
+            onClick = {
+
+                authViewModel.login(email, password)
+
+                      },
             colors =  ButtonDefaults.buttonColors(green8),
             shape = RoundedCornerShape(20.dp),
             modifier = Modifier.width(350.dp)
 
         ) {
             Text( text = "Login")        }
+
+
+
+
+
+
 
         Spacer(modifier = Modifier.width(20.dp))
 

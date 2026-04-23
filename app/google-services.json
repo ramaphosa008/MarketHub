@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "839044247137",
+    "project_id": "markethub-d1f1c",
+    "storage_bucket": "markethub-d1f1c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839044247137:android:172644599f70dd097a8420",
+        "android_client_info": {
+          "package_name": "com.ramaphosa.markethub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_SRvucSq3VRt6aex7nFXphrenmXdS0mY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
