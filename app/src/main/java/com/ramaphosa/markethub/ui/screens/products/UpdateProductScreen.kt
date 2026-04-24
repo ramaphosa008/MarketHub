@@ -1,3 +1,5 @@
+// This page is represented by a pencil icon for editing products that were previously added.
+
 package com.ramaphosa.markethub.ui.screens.products
 
 import android.net.Uri

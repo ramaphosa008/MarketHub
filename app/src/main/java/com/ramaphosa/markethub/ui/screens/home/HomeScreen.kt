@@ -48,6 +48,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.ramaphosa.markethub.R
+import com.ramaphosa.markethub.ui.screens.navigation.ROUTE_ADD_PRODUCT
 import com.ramaphosa.markethub.ui.screens.navigation.ROUT_INTENT
 import com.ramaphosa.markethub.ui.screens.navigation.ROUT_REGISTER
 import com.ramaphosa.markethub.ui.screens.navigation.ROUT_SCAFFOLD
@@ -201,6 +202,14 @@ fun HomeScreen(navController: NavController){
             modifier = Modifier.width(350.dp)
         ) {
             Text(text = "Scaffold")
+        }
+        Button(
+            onClick = { navController.navigate(ROUTE_ADD_PRODUCT) },
+            colors = ButtonDefaults.buttonColors(green8),
+            shape = RoundedCornerShape(10.dp),
+            modifier = Modifier.width(350.dp)
+        ) {
+            Text(text = "Add Products")
         }
 
 

@@ -7,9 +7,9 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
+import com.google.firebase.database.FirebaseDatabase
 import com.ramaphosa.markethub.models.Product
 import com.ramaphosa.markethub.ui.screens.navigation.ROUTE_VIEW_PRODUCTS
-import com.google.firebase.database.FirebaseDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
@@ -23,8 +23,8 @@ import java.io.InputStream
 
 class ProductViewModel : ViewModel() {
 
-    private val cloudinaryUrl = "https://api.cloudinary.com/v1_1/ds8y1vfji/image/upload"
-    private val uploadPreset = "megamart"
+    private val cloudinaryUrl = "https://api.cloudinary.com/v1_1/demgqld3r/image/upload"
+    private val uploadPreset = "Markethub"
 
     private val _products = mutableStateListOf<Product>()
     val products: List<Product> = _products
